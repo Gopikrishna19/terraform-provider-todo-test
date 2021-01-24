@@ -22,7 +22,7 @@ func NewClient(host string, port int) *Client {
 	}
 }
 
-func (c *Client) get() (*[]Todo, error) {
+func (c *Client) Get() (*[]Todo, error) {
 	body, err := c.httpRequest("GET", "todo", bytes.Buffer{})
 
 	if err != nil {
